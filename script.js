@@ -50,8 +50,12 @@ todoForm.addEventListener("submit", addTodo)
 
 //delete todos
 function deleteTodo(index) {
-    delete todos[index]
-    renderTodos();
+    if (confirm('Are you sure you want to delete the todo?'))
+    {
+        delete todos[index]
+        renderTodos();
+    }
+
 }
 
 
